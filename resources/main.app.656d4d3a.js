@@ -536,16 +536,16 @@ var appConfig = {
 		enabledCloud: !0,
 		animationEngine: "css",
 		copyright: {
-			content: "免费制作 → 人人秀",
+			content: "",
 			textAlign: "center",
-			url: "http://mp.weixin.qq.com/s?__biz=MzA4ODc5OTE1OQ==&mid=403178211&idx=1&sn=9c50c942df41020d626d50289a75cf16#rd",
+			url: "",
 			color: "#fff",
 			bgColor: "#000"
 		},
 		shareInfo: {
 			color: "#fff",
 			bgColor: "rgba(0, 0, 0, 0.9)",
-			content: '<div class="d-share-arrow"></div>'
+			content: ''
 		},
 		copyrightPage: {
 			id: "copyrightPage",
@@ -555,7 +555,7 @@ var appConfig = {
 				content: {
 					css: "",
 					fullscreen: !0,
-					html: ' <div class="copyright-content"> <div class="rrx-icon-close-layer"> </div> <div class="share-image"> <img src="{{shareImageUrl}}"> </div> <div class="share-title">{{shareTitle}}</div> <div class="view-more"> <a class="view-more-button" href="https://www.rrxiu.net" target="_blank">查看更多 >></a> </div> <a href="javascript:void(0)" class="show-rrxiu-report" >举报</a> <div class="bottomm-text" style="{{bgBottomColor}}"> <a class="make-rrxiu" href="http://mp.weixin.qq.com/s?__biz=MzA4ODc5OTE1OQ==&mid=403178211&idx=1&sn=9c50c942df41020d626d50289a75cf16#rd" target="blank"> <span> 免费制作 → 人人秀 </span> </a> </div> <a href="javascript:void(0)" class="show-rrxiu-visit" style="color:{{visitColor}};display:{{showVisitCount}}">阅读:{{visitCount}}</a> </div>',
+					html: '',
 					scroll: !1
 				},
 				display: !0,
@@ -3777,10 +3777,10 @@ window.rrxOpenWsiteTime = (new Date).getTime(), window.userReadDepth = 1, window
 						var a = '<a class="rrx-icon-close-layer fw_close" href="javascript:void(0)"></a><div class="top-menu-list"><div class="scroll-list"><div class="scroll-menu">',
 							b = isShowFocusWechat();
 						_dataObj.focusWechat && "rrx-qrcode.jpg" !== _dataObj.focusWechat.qrcode && !getCanModifyWechat() && (b = !1);
-						for(var c = _dataObj.topMenu.list, d = 0; d < c.length; d++) a += "url" === c[d].type ? '<a class="menu-' + c[d].type + '" href="javascript:void(0)" data-id="' + formatHref(c[d].href) + '">' + c[d].name + "</a>" : '<a class="menu-' + c[d].type + '" href="javascript:void(0)" data-id="' + c[d].value + '">' + c[d].name + "</a>", (b || d !== c.length - 1) && (a += '<div class="cut-line"></div>');
-						b && (a += '<a class="menu-focus" href="javascript:void(0)">关注公众号</a>'), a += "</div></div></div>", a += "customer" === _copyrightFrom ? '<div class="menu-copyright">' + getCopyrightCustomer(!0) + '<span class="show-report">举报</span></div>' : "na" === _copyrightFrom ? '<div class="menu-copyright"></div>' : '<div class="menu-copyright"><span class="show-report">举报</span><span class="show-copyright"><a href="' + appConfig.copyright.url + '" target="_blank" style="color:#fff;">' + appConfig.copyright.content + "</a></span></div>", $topMenuPanel.html(a), "na" !== _copyrightFrom && registerReportEvent($topMenuPanel.find(".menu-copyright .show-report")), _dataObj.showVisitCount && null !== _log && !getIsFromTpl() && setTimeout(function() {
-							0 !== _log.getVisitCount() && $topMenuPanel.find(".menu-copyright").append('<span class="show-visit">阅读:' + _log.getVisitCount() + "</span>")
-						}, 300);
+//						for(var c = _dataObj.topMenu.list, d = 0; d < c.length; d++) a += "url" === c[d].type ? '<a class="menu-' + c[d].type + '" href="javascript:void(0)" data-id="' + formatHref(c[d].href) + '">' + c[d].name + "</a>" : '<a class="menu-' + c[d].type + '" href="javascript:void(0)" data-id="' + c[d].value + '">' + c[d].name + "</a>", (b || d !== c.length - 1) && (a += '<div class="cut-line"></div>');
+//						b && (a += '<a class="menu-focus" href="javascript:void(0)">关注公众号</a>'), a += "</div></div></div>", a += "customer" === _copyrightFrom ? '<div class="menu-copyright">' + getCopyrightCustomer(!0) + '<span class="show-report">举报</span></div>' : "na" === _copyrightFrom ? '<div class="menu-copyright"></div>' : '<div class="menu-copyright"><span class="show-report">举报</span><span class="show-copyright"><a href="' + appConfig.copyright.url + '" target="_blank" style="color:#fff;">' + appConfig.copyright.content + "</a></span></div>", $topMenuPanel.html(a), "na" !== _copyrightFrom && registerReportEvent($topMenuPanel.find(".menu-copyright .show-report")), _dataObj.showVisitCount && null !== _log && !getIsFromTpl() && setTimeout(function() {
+//							0 !== _log.getVisitCount() && $topMenuPanel.find(".menu-copyright").append('<span class="show-visit">阅读:' + _log.getVisitCount() + "</span>")
+//						}, 300);
 						var e = $topMenuPanel.find(".fw_close");
 						e.off().on(clickEventType, function(a) {
 							a.stopPropagation(), a.preventDefault(), displayPanelDialog("up", "down", "topmenu"), removeAllBlurPage()
@@ -3874,15 +3874,15 @@ window.rrxOpenWsiteTime = (new Date).getTime(), window.userReadDepth = 1, window
 			}
 
 			function createSharePanel() {
-				var a = ' <div class="rrx-icon-close-layer"></div> <div class="share-image"> <img src="{{shareImageUrl}}"> </div> <div class="share-title">{{shareTitle}}</div> <div class="share-tips-box"> <div class="share-tips-content"> <div class="share-left"></div> <span class="share-center">分享到</span> <div class="share-right"></div> </div> </div> <div class="share-button-box"> <div class="share-button-content"> <div class="share-button-left"> <div class="rrx-icon-share-friend share-button-friend"> </div> <div class="share-button-text"> 微信好友 </div> </div> <div class="share-button-right"> <div class="rrx-icon-share-timeline share-button-timeline"> </div> <div class="share-button-text"> 朋友圈 </div> </div> </div> </div><div class="share-copyright"> <span class="show-report" style="display: none;">举报</span>   </div>',
-					b = _dataObj.shareImageUrl || defaultShareImageUrl;
-				a = a.replace("{{shareTitle}}", _dataObj.title).replace("{{shareImageUrl}}", b), $sharePanel.html(a);
-				var c = $sharePanel.find(".share-copyright");
-				"na" === _copyrightFrom || c.append("customer" === _copyrightFrom ? getCopyrightCustomer(!0) : '<span class="show-copyright"><a href="' + appConfig.copyright.url + '" target="_blank" style="color:#fff;">' + appConfig.copyright.content + "</a></span>");
-				var d = c.find(".show-report");
-				"na" === _copyrightFrom ? d.hide() : d.show(), registerReportEvent(d), _dataObj.showVisitCount && null !== _log && !getIsFromTpl() && setTimeout(function() {
-					0 !== _log.getVisitCount() && c.append('<span class="show-visit">阅读:' + _log.getVisitCount() + "</span>")
-				}, 1500);
+//				var a = ' <div class="rrx-icon-close-layer"></div> <div class="share-image"> <img src="{{shareImageUrl}}"> </div> <div class="share-title">{{shareTitle}}</div> <div class="share-tips-box"> <div class="share-tips-content"> <div class="share-left"></div> <span class="share-center">分享到</span> <div class="share-right"></div> </div> </div> <div class="share-button-box"> <div class="share-button-content"> <div class="share-button-left"> <div class="rrx-icon-share-friend share-button-friend"> </div> <div class="share-button-text"> 微信好友 </div> </div> <div class="share-button-right"> <div class="rrx-icon-share-timeline share-button-timeline"> </div> <div class="share-button-text"> 朋友圈 </div> </div> </div> </div><div class="share-copyright"> <span class="show-report" style="display: none;">举报</span>   </div>',
+//					b = _dataObj.shareImageUrl || defaultShareImageUrl;
+//				a = a.replace("{{shareTitle}}", _dataObj.title).replace("{{shareImageUrl}}", b), $sharePanel.html(a);
+//				var c = $sharePanel.find(".share-copyright");
+//				"na" === _copyrightFrom || c.append("customer" === _copyrightFrom ? getCopyrightCustomer(!0) : '<span class="show-copyright"><a href="' + appConfig.copyright.url + '" target="_blank" style="color:#fff;">' + appConfig.copyright.content + "</a></span>");
+//				var d = c.find(".show-report");
+//				"na" === _copyrightFrom ? d.hide() : d.show(), registerReportEvent(d), _dataObj.showVisitCount && null !== _log && !getIsFromTpl() && setTimeout(function() {
+//					0 !== _log.getVisitCount() && c.append('<span class="show-visit">阅读:' + _log.getVisitCount() + "</span>")
+//				}, 1500);
 				var e = $sharePanel.find(".rrx-icon-close-layer");
 				e.off().on(clickEventType, function(a) {
 					a.stopPropagation(), a.preventDefault(), displayPanelDialog("up", "down", "share"), removeAllBlurPage()
@@ -4049,10 +4049,10 @@ window.rrxOpenWsiteTime = (new Date).getTime(), window.userReadDepth = 1, window
 			function createDanmuPanel() {
 				var a = "rrx-icon-danmu-open l-icon";
 				_dataObj.hasOwnProperty("danmuLike") && (_dataObj.danmuLike.showDanmu || (a = "rrx-icon-danmu-close l-icon"));
-				var b = '<a class="rrx-icon-close-layer dm_close"></a><div class="comment-send-tip"></div><div class="p-buttons"><div class="btn-like"><div class="rrx-icon-danmu-like l-icon"></div><div class="l-txt">喜欢</div><span class="l-tip">' + danmu_like_count + '</span></div><div class="btn-danmu"><div class="' + a + '"></div><div class="l-txt">弹幕</div><span class="l-tip">' + danmu_comment_count + '</span></div><div class="btn-share"><div class="rrx-icon-danmu-share l-icon"></div><div class="l-txt">分享</div></div></div><div class="p-publish"><input type="text" placeholder="发布弹幕"> <a href="javascript:void(0)">发布</a></div><div class="p-comments"><div class="comment-list"><div class="scroll-comment"></div></div></div>';
-				"customer" !== _copyrightFrom && "na" !== _copyrightFrom && (b += '<div class="p-make"><a href="' + appConfig.copyright.url + '" target="_blank">我也要制作人人秀</a></div>'), b += "customer" === _copyrightFrom ? '<div class="p-copyright">' + getCopyrightCustomer(!0) + '<span class="show-report">举报</span></div>' : "na" === _copyrightFrom ? '<div class="p-copyright"></div>' : '<div class="p-copyright"><span class="show-report">举报</span><span class="show-copyright"><a href="' + appConfig.copyright.url + '" target="_blank" style="color:#fff;">' + appConfig.copyright.content + "</a></span></div>", $danmuPanel.html(b), "na" !== _copyrightFrom && registerReportEvent($danmuPanel.find(".p-copyright .show-report")), _dataObj.showVisitCount && null !== _log && !getIsFromTpl() && setTimeout(function() {
-					0 !== _log.getVisitCount() && $danmuPanel.find(".p-copyright").append('<span class="show-visit">阅读:' + _log.getVisitCount() + "</span>")
-				}, 300), loadCommentListByiScroll(DM_Comment_List)
+//				var b = '<a class="rrx-icon-close-layer dm_close"></a><div class="comment-send-tip"></div><div class="p-buttons"><div class="btn-like"><div class="rrx-icon-danmu-like l-icon"></div><div class="l-txt">喜欢</div><span class="l-tip">' + danmu_like_count + '</span></div><div class="btn-danmu"><div class="' + a + '"></div><div class="l-txt">弹幕</div><span class="l-tip">' + danmu_comment_count + '</span></div><div class="btn-share"><div class="rrx-icon-danmu-share l-icon"></div><div class="l-txt">分享</div></div></div><div class="p-publish"><input type="text" placeholder="发布弹幕"> <a href="javascript:void(0)">发布</a></div><div class="p-comments"><div class="comment-list"><div class="scroll-comment"></div></div></div>';
+//				"customer" !== _copyrightFrom && "na" !== _copyrightFrom && (b += '<div class="p-make"><a href="' + appConfig.copyright.url + '" target="_blank">我也要制作人人秀</a></div>'), b += "customer" === _copyrightFrom ? '<div class="p-copyright">' + getCopyrightCustomer(!0) + '<span class="show-report">举报</span></div>' : "na" === _copyrightFrom ? '<div class="p-copyright"></div>' : '<div class="p-copyright"><span class="show-report">举报</span><span class="show-copyright"><a href="' + appConfig.copyright.url + '" target="_blank" style="color:#fff;">' + appConfig.copyright.content + "</a></span></div>", $danmuPanel.html(b), "na" !== _copyrightFrom && registerReportEvent($danmuPanel.find(".p-copyright .show-report")), _dataObj.showVisitCount && null !== _log && !getIsFromTpl() && setTimeout(function() {
+//					0 !== _log.getVisitCount() && $danmuPanel.find(".p-copyright").append('<span class="show-visit">阅读:' + _log.getVisitCount() + "</span>")
+//				}, 300), loadCommentListByiScroll(DM_Comment_List)
 			}
 
 			function showDanmuEvent() {
@@ -4437,14 +4437,14 @@ window.rrxOpenWsiteTime = (new Date).getTime(), window.userReadDepth = 1, window
 			}
 
 			function createCopyrightCustomer() {
-				$copyright.css("background-color", getCopyrightBgColor(_dataObj.copyright.bgColor)), $copyright.css("color", getCopyrightColor(_dataObj.copyright.color)), $copyright.css("text-align", getCopyrightTextAlign(_dataObj.copyright.textAlign)), $copyright.html(getCopyrightCustomer()), $copyright.prepend(getShowReportByWeplus()), registerReportEvent($copyright.find(".show-report")), _dataObj.showVisitCount && null !== _log && !getIsFromTpl() && setTimeout(function() {
-					0 !== _log.getVisitCount() && $copyright.append('<span class="show-visit">阅读:' + _log.getVisitCount() + "</span>")
-				}, 1500)
+//				$copyright.css("background-color", getCopyrightBgColor(_dataObj.copyright.bgColor)), $copyright.css("color", getCopyrightColor(_dataObj.copyright.color)), $copyright.css("text-align", getCopyrightTextAlign(_dataObj.copyright.textAlign)), $copyright.html(getCopyrightCustomer()), $copyright.prepend(getShowReportByWeplus()), registerReportEvent($copyright.find(".show-report")), _dataObj.showVisitCount && null !== _log && !getIsFromTpl() && setTimeout(function() {
+//					0 !== _log.getVisitCount() && $copyright.append('<span class="show-visit">阅读:' + _log.getVisitCount() + "</span>")
+//				}, 1500)
 			}
 
 			function getShowVisitByWeplus() {
-				var a = '<span class="show-visit" ';
-				return _dataObj.flipProgress && (a += 'style="margin-right:40px;margin-bottom:2px;"'), a += ">阅读:" + _log.getVisitCount() + "</span>"
+//				var a = '<span class="show-visit" ';
+//				return _dataObj.flipProgress && (a += 'style="margin-right:40px;margin-bottom:2px;"'), a += ">阅读:" + _log.getVisitCount() + "</span>"
 			}
 
 			function getShowAllPageReport() {
@@ -4460,35 +4460,35 @@ window.rrxOpenWsiteTime = (new Date).getTime(), window.userReadDepth = 1, window
 			}
 
 			function getShowCopyrightByWeplus() {
-				var a = appConfig.copyright;
-				return '<span class="show-copyright">' + createCopyrightHrefConent(a.url, getCopyrightContent(a.content), getCopyrightColor(a.color)) + "</span>"
+//				var a = appConfig.copyright;
+//				return '<span class="show-copyright">' + createCopyrightHrefConent(a.url, getCopyrightContent(a.content), getCopyrightColor(a.color)) + "</span>"
 			}
 
 			function getShowCopyrightByUnion() {
-				var a = appConfig.copyright,
-					b = getCopyrightColor(a.color),
-					c = "人人秀技术支持",
-					d = _dataObj.copyright.bgColor,
-					e = _dataObj.copyright.url,
-					f = '<div class="cy-union">' + createCopyrightHrefConent(e, _dataObj.copyright.content, b) + "</div>",
-					g = '<div class="cy-rrxiu">' + createCopyrightHrefConent(e, c, b) + "</div>";
-				return $copyright.css({
-					height: "68px",
-					"line-height": "68px",
-					"background-color": d
-				}), '<span style="background-color:' + d + '" class="show-copyright">' + f + g + "</span>"
+//				var a = appConfig.copyright,
+//					b = getCopyrightColor(a.color),
+//					c = "人人秀技术支持",
+//					d = _dataObj.copyright.bgColor,
+//					e = _dataObj.copyright.url,
+//					f = '<div class="cy-union">' + createCopyrightHrefConent(e, _dataObj.copyright.content, b) + "</div>",
+//					g = '<div class="cy-rrxiu">' + createCopyrightHrefConent(e, c, b) + "</div>";
+//				return $copyright.css({
+//					height: "68px",
+//					"line-height": "68px",
+//					"background-color": d
+//				}), '<span style="background-color:' + d + '" class="show-copyright">' + f + g + "</span>"
 			}
 
 			function createCopyrightWeplus(a) {
-				var b = "",
-					c = appConfig.copyright,
-					d = getShowReportByWeplus(),
-					e = null;
-				$copyright.css("background-color", getCopyrightBgColor(c.bgColor)), $copyright.css("color", getCopyrightColor(c.color)), "na" === _copyrightFrom ? _dataObj.showVisitCount && a !== !0 && !getIsFromTpl() && setTimeout(function() {
-					0 !== _log.getVisitCount() && (b = getShowVisitByWeplus(), $copyright.append(b))
-				}, 1500) : (b = "union" === _copyrightFrom ? getShowCopyrightByUnion() : getShowCopyrightByWeplus(), $copyright.css("text-align", "center"), a ? ($copyright.html(b), showCopyright(!0, currentPageId)) : (b = d + b, _dataObj.showVisitCount && null !== _log && !getIsFromTpl() && setTimeout(function() {
-					0 !== _log.getVisitCount() && $copyright.append('<span class="show-visit">阅读:' + _log.getVisitCount() + "</span>")
-				}, 1500), $copyright.html(b), registerReportEvent($copyright.find(".show-report")), e = getPageObjById(currentPageId), showCopyright(e ? e.stopFlip : !1, currentPageId)))
+//				var b = "",
+//					c = appConfig.copyright,
+//					d = getShowReportByWeplus(),
+//					e = null;
+//				$copyright.css("background-color", getCopyrightBgColor(c.bgColor)), $copyright.css("color", getCopyrightColor(c.color)), "na" === _copyrightFrom ? _dataObj.showVisitCount && a !== !0 && !getIsFromTpl() && setTimeout(function() {
+//					0 !== _log.getVisitCount() && (b = getShowVisitByWeplus(), $copyright.append(b))
+//				}, 1500) : (b = "union" === _copyrightFrom ? getShowCopyrightByUnion() : getShowCopyrightByWeplus(), $copyright.css("text-align", "center"), a ? ($copyright.html(b), showCopyright(!0, currentPageId)) : (b = d + b, _dataObj.showVisitCount && null !== _log && !getIsFromTpl() && setTimeout(function() {
+//					0 !== _log.getVisitCount() && $copyright.append('<span class="show-visit">阅读:' + _log.getVisitCount() + "</span>")
+//				}, 1500), $copyright.html(b), registerReportEvent($copyright.find(".show-report")), e = getPageObjById(currentPageId), showCopyright(e ? e.stopFlip : !1, currentPageId)))
 			}
 
 			function getIsFromTpl() {
@@ -4658,7 +4658,7 @@ window.rrxOpenWsiteTime = (new Date).getTime(), window.userReadDepth = 1, window
 							top: 0,
 							left: "100%"
 						}));
-						var a = '  <div class="rrx-icon-close-layer"> </div> <div class="share-image"> <img src="{{shareImageUrl}}"> </div> <div class="share-title">{{shareTitle}}</div> <div class="view-more"> <a class="view-more-button" href="' + appConfig.copyright.url + '" target="_blank">查看更多 >></a> </div> <a href="javascript:void(0)" class="show-rrxiu-report">举报</a> <div class="bottomm-text" style="{{bgBottomColor}}"> <a class="make-rrxiu" href="{{makeRRXUrl}}" target="blank"> <span>{{makeRRXText}}</span> </a> </div> <a href="javascript:void(0)" class="show-rrxiu-visit" style="color:#fff;display:{{showVisitCount}}">阅读:{{visitCount}}</a>',
+						var a = '  <div class="rrx-icon-close-layer"> </div> <div class="share-image"> </div> <div class="share-title">陈从文制作于2018年02月13日，献于我的女友-何星蔚</div>',
 							b = _dataObj.shareImageUrl || defaultShareImageUrl;
 						a = a.replace("{{shareTitle}}", _dataObj.title).replace("{{shareImageUrl}}", b).replace("{{showVisitCount}}", _dataObj.showVisitCount ? "block" : "none").replace("{{makeRRXUrl}}", appConfig.copyright.url).replace("{{makeRRXText}}", appConfig.copyright.content), $pageCopyrightPageEnd.html(a), _dataObj.showVisitCount && setTimeout(function() {
 							var a = _log.getVisitCount(),
@@ -5053,9 +5053,9 @@ window.rrxOpenWsiteTime = (new Date).getTime(), window.userReadDepth = 1, window
 			}
 
 			function initBone() {
-				// html = '<div class="pt-reportpage page_reportpage" style="display:none"></div><div class="pt-sharepage page_sharepage"></div><div class="share-poster-result-dialog" style="-webkit-user-select:none"></div><div class="share-poster-process-dialog" style="-webkit-user-select:none"></div><img class="focus-wechat-button"><img class="top-menu-button"><div class="focus-wechat-panel damu-down"></div><div class="focus-plugin-wxqr-panel"></div><div class="top-menu-panel damu-down"></div><div class="share-panel damu-down"></div><div class="page_copyrightPage damu-down"></div><div class="danmu-button rrx-icon-sidle-danmu"></div><div class="danmu-panel damu-down"></div><div class="copyright"></div><div class="plugin-copyright"></div><div class="danmu-show"></div><div class="pt-preview-notice">预览模式，仅供测试</div><div class="pt-wrapper"><div class="pt-pagewrapper"><div class="pt-floorpage page_floorpage"></div><div class="pt-pagelist"></div><div class="pt-progress"><span class="progress-tip"></span><span class="page-tip"></span></div></div><div class="arrow-down"><p></p></div><div class="arrow-right"><p></p></div><div class="music"><span class="music1"><s></s></span><span class="music2"><s></s></span><span class="music3"><s></s></span></div><div class="sidle-share rrx-icon-share"></div><div class="sidle-report rrx-icon-report"></div></div>', _$canvas.find(".pt-inner").append(html), $ptWrapper = _$canvas.find(".pt-wrapper"), $previewNotice = _$canvas.find(".pt-preview-notice"), $copyright = _$canvas.find(".copyright"), $pluginCopyright = _$canvas.find(".plugin-copyright"), $pagewrapper = _$canvas.find(".pt-pagewrapper"), $pagelist = _$canvas.find(".pt-pagelist"), $progress = _$canvas.find(".pt-progress"), $floorpage = _$canvas.find(".pt-floorpage"), $loadingpage = _$canvas.find(".pt-loadingpage"), $sharepage = _$canvas.find(".pt-sharepage"), $reportpage = _$canvas.find(".pt-reportpage"), $sharepage.bind(clickEventType, function() {
-					// $(this).hide()
-				// }), $iconArrowDown = _$canvas.find(".arrow-down"), $iconArrowRight = _$canvas.find(".arrow-right"), $iconMusic = _$canvas.find(".music"), $focusButton = _$canvas.find(".focus-wechat-button"), $topMenuButton = _$canvas.find(".top-menu-button"), $focusPanel = _$canvas.find(".focus-wechat-panel"), $topMenuPanel = _$canvas.find(".top-menu-panel"), $sharePanel = _$canvas.find(".share-panel"), $sharePosterDialog = _$canvas.find(".share-poster-result-dialog"), $pageCopyrightPageEnd = _$canvas.find(".page_copyrightPage"), $danmuButton = _$canvas.find(".danmu-button"), $danmuPanel = _$canvas.find(".danmu-panel"), $danmuShow = _$canvas.find(".danmu-show"), $focusWxQrPanel = _$canvas.find(".focus-plugin-wxqr-panel")
+				html = '<div class="pt-reportpage page_reportpage" style="display:none"></div><div class="pt-sharepage page_sharepage"></div><div class="share-poster-result-dialog" style="-webkit-user-select:none"></div><div class="share-poster-process-dialog" style="-webkit-user-select:none"></div><img class="focus-wechat-button"><img class="top-menu-button"><div class="focus-wechat-panel damu-down"></div><div class="focus-plugin-wxqr-panel"></div><div class="top-menu-panel damu-down"></div><div class="share-panel damu-down"></div><div class="page_copyrightPage damu-down"></div><div class="danmu-button rrx-icon-sidle-danmu"></div><div class="danmu-panel damu-down"></div><div class="copyright"></div><div class="plugin-copyright"></div><div class="danmu-show"></div><div class="pt-preview-notice">预览模式，仅供测试</div><div class="pt-wrapper"><div class="pt-pagewrapper"><div class="pt-floorpage page_floorpage"></div><div class="pt-pagelist"></div><div class="pt-progress"><span class="progress-tip"></span><span class="page-tip"></span></div></div><div class="arrow-down"><p></p></div><div class="arrow-right"><p></p></div><div class="music"><span class="music1"><s></s></span><span class="music2"><s></s></span><span class="music3"><s></s></span></div><div class="sidle-share rrx-icon-share"></div><div class="sidle-report rrx-icon-report"></div></div>', _$canvas.find(".pt-inner").append(html), $ptWrapper = _$canvas.find(".pt-wrapper"), $previewNotice = _$canvas.find(".pt-preview-notice"), $copyright = _$canvas.find(".copyright"), $pluginCopyright = _$canvas.find(".plugin-copyright"), $pagewrapper = _$canvas.find(".pt-pagewrapper"), $pagelist = _$canvas.find(".pt-pagelist"), $progress = _$canvas.find(".pt-progress"), $floorpage = _$canvas.find(".pt-floorpage"), $loadingpage = _$canvas.find(".pt-loadingpage"), $sharepage = _$canvas.find(".pt-sharepage"), $reportpage = _$canvas.find(".pt-reportpage"), $sharepage.bind(clickEventType, function() {
+					$(this).hide()
+				}), $iconArrowDown = _$canvas.find(".arrow-down"), $iconArrowRight = _$canvas.find(".arrow-right"), $iconMusic = _$canvas.find(".music"), $focusButton = _$canvas.find(".focus-wechat-button"), $topMenuButton = _$canvas.find(".top-menu-button"), $focusPanel = _$canvas.find(".focus-wechat-panel"), $topMenuPanel = _$canvas.find(".top-menu-panel"), $sharePanel = _$canvas.find(".share-panel"), $sharePosterDialog = _$canvas.find(".share-poster-result-dialog"), $pageCopyrightPageEnd = _$canvas.find(".page_copyrightPage"), $danmuButton = _$canvas.find(".danmu-button"), $danmuPanel = _$canvas.find(".danmu-panel"), $danmuShow = _$canvas.find(".danmu-show"), $focusWxQrPanel = _$canvas.find(".focus-plugin-wxqr-panel")
 			}
 
 			function initSwipe() {
