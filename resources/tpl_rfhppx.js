@@ -424,7 +424,7 @@ var coolData = {
 				"duration": 1,
 				"delay": 5.6
 			}],
-			"displayName": "16-\u5973\u53cb\u5927\u4eba\u4eb2\u542f"
+			"displayName": "16-\u9648\u4ece\u6587\u6700\u7231\u7684\u6b23\u6170\u4eb2\u542f"
 		}],
 		"sort": 0,
 		"backgroundColor": " rgba(250,250,250,1)",
