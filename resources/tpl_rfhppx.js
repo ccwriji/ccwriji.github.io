@@ -409,7 +409,7 @@ var coolData = {
 			"id": 16,
 			"type": "div",
 			"display": true,
-			"content": "<div class=\"element-last\" style=\"word-wrap: break-word; word-break:font-family:\u9ed1\u4f53, SimHei; break-all; font-size: 30px; font-weight: normal; font-style: normal; text-decoration: none; color: #FFFFFF; text-align: center; text-shadow: none;\">\u8001\u5a46\u5927\u4eba\u4eb2\u542f<\/div>",
+			"content": "<div class=\"element-last\" style=\"word-wrap: break-word; word-break:font-family:\u9ed1\u4f53, SimHei; break-all; font-size: 30px; font-weight: normal; font-style: normal; text-decoration: none; color: #FFFFFF; text-align: center; text-shadow: none;\">\u9648\u4ece\u6587\u6700\u7231\u7684\u6b23\u6170\u4eb2\u542f<\/div>",
 			"zIndex": 16,
 			"resize": 0,
 			"height": -1,
