@@ -523,7 +523,7 @@ var appConfig = {
 		imageOss: "./",
 		shareImageThumb: "@!200x200",
 		llImageThumb: "@!view-loading-logo",
-		cloudHost: "http://view.rrxh5.cc/data/",
+		cloudHost: "http://xn--vqq886c22v.xn--6qq986b3xl/",
 		pluginDomainFormat: "http://assets.rrxh5.cc/plugin/{token}/{version}",
 		clientHost: "http://www.rrxiu.net/",
 		webFontHost: "http://assets.rrxh5.cc/webfont/",

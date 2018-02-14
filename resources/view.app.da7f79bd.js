@@ -133,7 +133,7 @@ var appConfig = {
 	huanleHost: "http://www.huanle001.com/",
 	focusIntro: "https://www.rrxiu.net/content-3zrxvi",
 	copyright: {
-		content: "免费制作 → 人人秀",
+		content: "",
 		textAlign: "right",
 		url: "http://mp.weixin.qq.com/s?__biz=MzA4ODc5OTE1OQ==&mid=403178211&idx=1&sn=9c50c942df41020d626d50289a75cf16#rd",
 		color: "#fff",
